@@ -1,0 +1,71 @@
+# Flutter/Dart related
+**/build/
+**/.dart_tool/
+**/.pub/
+**/packages/
+**/generated_plugin_registrant.dart
+
+# Miscellaneous
+.DS_Store
+*.class
+*.lock
+*.log
+*.pyc
+*.swp
+*.swo
+*.orig
+*.idea/
+
+# Flutter env
+.flutter-plugins
+.flutter-plugins-dependencies
+.package-config.json
+.dart_tool/
+
+# IntelliJ related (optional)
+.idea/
+*.iml
+
+# VS Code related (optional)
+.vscode/
+.history/
+
+# Android related
+local.properties
+**/android/**/gradle-wrapper.jar
+**/android/.gradle/
+**/android/captures/
+**/android/outputs/
+
+# iOS related
+ios/Flutter/.last_build_id
+ios/.symlinks/
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/DerivedData/
+ios/.dart_tool/
+
+# Web related
+web/.dart_tool/
+
+# Windows related
+windows/.dart_tool/
+windows/Flutter/ephemeral/
+
+# Linux related
+linux/.dart_tool/
+linux/flutter/ephemeral/
+
+# macOS related
+macos/.dart_tool/
+macos/Flutter/ephemeral/
+
+# Flutter generated
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.env
+pubspec.lock
+
+# Symbolic links
+**/symlink/
