@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_loading_demo/views/full_image.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../view_models/image_gallery_viewmodel.dart';
@@ -56,7 +57,6 @@ class _ImageGalleryState extends State<ImageGallery> {
           if (viewModel.isLoading && viewModel.images.isEmpty) {
             return const Center(child: CircularProgressIndicator());
           }
-
           return MasonryGridView.count(
             crossAxisCount:
                 _calculateCrossAxisCount(context), // Number of columns
@@ -66,7 +66,17 @@ class _ImageGalleryState extends State<ImageGallery> {
             itemCount: viewModel.images.length,
             itemBuilder: (context, index) {
               final image = viewModel.images[index];
-              return ImageGridTile(image: image);
+              return InkWell(
+                  child: ImageGridTile(image: image),
+                  onTap: () {
+                    Navigator.push<void>(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (BuildContext context) =>
+                            FullImage(imageData: image),
+                      ),
+                    );
+                  });
             },
           );
         },
